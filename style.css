@@ -1,0 +1,126 @@
+/* General page background */
+body {
+  background-color: burlywood;
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #333;
+}
+
+/* Wrapper for all content */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+/* Title header */
+.title-header {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.5rem;
+  color: #8b0000; /* deep festive red */
+  margin-bottom: 1em;
+  text-shadow: 2px 2px #f5deb3;
+}
+
+/* Decorative box around input */
+.deco-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  background-color: rgb(250, 245, 215);
+  padding: 1em;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin-bottom: 2em;
+}
+
+/* Key input section */
+.key-wrapper {
+  background-color: blanchedalmond;
+  padding: 1em;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.key-wrapper label {
+  font-weight: bold;
+  color: #8b4513;
+}
+
+.key-wrapper input[type="text"] {
+  padding: 8px 12px;
+  border: 2px solid coral;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.key-wrapper input[type="text"]:focus {
+  border-color: #8b0000;
+}
+
+/* Enter button */
+.enter-button {
+  font-family: monospace;
+  background-color: coral;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.enter-button:hover {
+  background-color: #8b0000;
+  transform: scale(1.05);
+}
+
+/* Turkey image animation */
+.turkeyimg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 4px solid #f5deb3;
+  position: relative;
+  animation: slideIn 1.5s ease-out forwards;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .title-header {
+    font-size: 2rem;
+  }
+  .deco-wrapper {
+    width: 95%;
+    height: auto;
+  }
+  .key-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .enter-button {
+    width: 100%;
+  }
+}

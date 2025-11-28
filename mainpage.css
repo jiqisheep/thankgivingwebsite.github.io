@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", "PingFang SC", "Microsoft YaHei", serif;
+  background: linear-gradient(135deg, #fff8f0, #ffe5cc);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Language selector */
+.lang-selector {
+  text-align: center;
+  margin: 20px;
+}
+
+.lang-selector label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #8b4513;
+}
+
+.lang-selector input[type="radio"] {
+  margin: 0 5px;
+  accent-color: #d2691e;
+}
+
+/* Hotpot header */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 10px;
+  color: #b22222;
+  text-shadow: 2px 2px #f5deb3;
+}
+
+/* Section wrapper */
+.section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 30px auto;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+/* Alternate layout */
+.section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Special styling for soup base */
+.soup-base {
+  background: #fff5e6;
+  border: 2px solid #d2691e;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Section text */
+.section-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.section-text h3 {
+  font-size: 1.5rem;
+  color: #8b0000;
+  margin-bottom: 10px;
+}
+
+.section-text p {
+  background-color: #fffaf0;
+  border-left: 5px solid #d2691e;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: justify;
+}
+
+/* Section image with animation */
+.section img {
+  flex: 1;
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  border: 4px solid #f5deb3;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Language-specific styling */
+.eng {
+  font-family: Georgia, serif;
+}
+
+.chi {
+  font-family: "KaiTi", "SimSun", "Noto Serif CJK SC", serif;
+  letter-spacing: 2px;
+}
+
+/* Smooth transitions */
+.eng, .chi {
+  transition: opacity 0.5s ease;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .section,
+  .section.reverse {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section img {
+    max-width: 90%;
+  }
+}

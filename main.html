@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanksgiving Dinner</title>
+  <link rel="stylesheet" href="mainpage.css">
+</head>
+<body>
+  <!-- Language selector -->
+  <div class="lang-selector">
+    <label for="lang">Choose language:</label>
+    <input type="radio" name="lang" value="chi"> 中文
+    <input type="radio" name="lang" value="eng" checked> English
+  </div>
+
+  <!-- Hotpot header -->
+  <h1 class="eng" id="eng-header">Hotpot</h1>
+  <h1 class="chi" id="chi-header" style="display: none;">火锅</h1>
+
+  <!-- Soup base section (directly under header) -->
+  <div class="section soup-base">
+    <div class="section-text">
+      <h3 class="eng" id="eng-soup">Bone Broth</h3>
+      <h3 class="chi" id="chi-soup" style="display: none;">骨头汤</h3>
+      <p class="eng" id="eng-soup-p">
+        Bone broth is the soul of hotpot. Rich in nutrients and flavor, it provides a comforting base that enhances every ingredient cooked within it.
+      </p>
+      <p class="chi" id="chi-soup-p" style="display: none;">
+        骨头汤是火锅的灵魂。它营养丰富、味道醇厚，为所有食材提供温暖的底味。
+      </p>
+    </div>
+    <img src="bonebrothimg.jpeg" alt="Bone Broth Soup Base">
+  </div>
+
+  <!-- Lamb section -->
+  <div class="section">
+    <div class="section-text">
+      <h3 class="eng" id="eng-lamb">Lamb</h3>
+      <h3 class="chi" id="chi-lamb" style="display: none;">羊肉</h3>
+      <p class="eng" id="eng-lamb-p">Lamb meat is one of the most beloved ingredients in hotpot...</p>
+      <p class="chi" id="chi-lamb-p" style="display: none;">羊肉是火锅中最受欢迎的食材之一。</p>
+    </div>
+    <img src="lambimg.jpeg" alt="Lamb Meat">
+  </div>
+
+  <!-- Mushroom section -->
+  <div class="section reverse">
+    <div class="section-text">
+      <h3 class="eng" id="eng-mushroom">Mushroom</h3>
+      <h3 class="chi" id="chi-mushroom" style="display: none;">蘑菇</h3>
+      <p class="eng" id="eng-mushroom-p">Mushrooms add an earthy depth to hotpot...</p>
+      <p class="chi" id="chi-mushroom-p" style="display: none;">蘑菇为火锅增添了浓郁的香气。</p>
+    </div>
+    <img src="mushroomimg.jpeg" alt="Mushrooms">
+  </div>
+
+  <!-- Shrimp section -->
+  <div class="section">
+    <div class="section-text">
+      <h3 class="eng" id="eng-shrimp">Shrimp</h3>
+      <h3 class="chi" id="chi-shrimp" style="display: none;">虾</h3>
+      <p class="eng" id="eng-shrimp-p">Shrimp brings a sweet, delicate flavor to hotpot...</p>
+      <p class="chi" id="chi-shrimp-p" style="display: none;">虾为火锅带来清甜的滋味。</p>
+    </div>
+    <img src="shrimpimg.jpeg" alt="Shrimp">
+  </div>
+
+  <script src="chibutton.js"></script>
+</body>
+</html>
